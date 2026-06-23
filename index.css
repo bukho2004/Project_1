@@ -1,0 +1,164 @@
+header{
+    text-align: center;
+    background-color: black;
+    padding: 14px;
+    position: sticky;
+    z-index: 1000;
+    top:0;
+}
+h1 {
+    color: #FFFFF0;
+}
+
+ul{
+    display: flex;          
+    list-style-type: none;  
+    padding: 0;             
+    margin: 0;
+    gap: 20px;
+}
+
+a:hover{
+    color:#D4AF37;
+    cursor: pointer;
+
+}
+a:link{
+
+    color: #FFFFF0;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #FFFFF0;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+            border-bottom: #D4AF37;}
+
+
+    body{background-color: #FE6F5E
+    }
+/* Base navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #333; /* Optional: gives the nav bar a background color */
+}
+
+nav ul li {
+    position: relative; /* Crucial for positioning the dropdown absolute to this item */
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Highlights menu item on hover */
+}
+
+/* --- Dropdown Specific Styles --- */
+
+/* Hide the dropdown menu by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+    z-index: 1;
+    flex-direction: column; /* Stacks the dropdown links vertically */
+    padding: 0;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Change background of dropdown links on hover */
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+/* Show the dropdown menu when hovering over the parent 'li' element */
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+/* Gallery layout layout */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 4px;
+}
+
+/* Minor hover zoom effect on gallery images */
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* --- LIGHTBOX STYLES --- */
+.lightbox {
+    display: none; /* Keeps it hidden until triggered */
+    position: fixed;
+    z-index: 999; /* Sits on top of everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Black backdrop with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lightbox enlarged image rules */
+.lightbox-img {
+    max-width: 85%;
+    max-height: 85%;
+    border: 3px solid white;
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* Close button 'X' top right */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #ff4d4d; /* Changes color to red when hovered */
+}
+
+
